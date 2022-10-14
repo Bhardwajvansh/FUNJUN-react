@@ -1,0 +1,14 @@
+#idea{
+    height: 100vh;
+    padding: 5rem 0;
+}
+.container-idea{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container h1{
+    margin-bottom: 2rem;
+    font-family: 'Laila', sans-serif;
+    font-size: 3rem;
+    color: var(--color-text);
+}

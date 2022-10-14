@@ -1,0 +1,48 @@
+#party{
+    flex: 50%;
+}
+.main-container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 40vh;
+}
+.main-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.overlay span{
+    background: var(--color-text);
+    width: 10rem;
+    height: .2rem;
+    margin: .5rem 0;
+    border-radius: 1rem;
+}
+.overlay{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right,rgba(215,168,95),rgba(215,168,95,0.5));
+    height: 100%;
+    transition: .5s ease-in-out;
+    padding: 2rem;
+    width: 100%;
+    left: -1500px;
+    display: flex;
+    flex-direction: column;
+}
+.main-container:hover .overlay{
+    left: 0;
+}
+.overlay h2{
+    font-family: 'Laila', sans-serif;
+    color: var(--color-text);
+    font-weight: bolder;
+}
+.overlay p{
+    font-family: 'Laila', sans-serif;
+    color: var(--color-text);
+    font-weight: bolder;
+}

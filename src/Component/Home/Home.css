@@ -1,0 +1,45 @@
+#home{
+    height: 100vh;
+    background: url('../../Assets/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.container_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.left{
+    flex: 50%;
+}
+.left h1{
+    margin-bottom:2rem ;
+    font-family: 'Laila', sans-serif;
+    font-size: 3rem;
+    color: var(--color-text);
+}
+.left p{
+    font-family: 'Laila', sans-serif;
+    color: var(--color-text);
+    font-size: 1rem;
+}
+.right{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right img{
+    width: 23rem;
+}
+.btns{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.btns a{
+    font-family: 'Laila', sans-serif;
+}

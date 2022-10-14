@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@400;500;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --color-bg-light: #e7cfab;
+    --color-bg-dark: #dcb691;
+    --color-text: #6b3e28;
+    --color-text-variant: #bd9879;
+    --color-primary-variant: #d7a85f; 
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+    --transition: all 400ms ease;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.btn1 {
+    padding: 0.7rem 2rem;
+    border-radius: 0.5rem;
+    background: var(--color-primary-variant);
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--color-text);
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.25);
+}
+
+.btn1:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn2 {
+    padding: 0.7rem 2rem;
+    border: 3px solid var(--color-text);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.25);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn2:hover {
+    transform: translateY(-5px);
+}
+
+
+/* scroll bar */
+
+:root {
+    --code-color: darkred;
+    --code-bg-color: #aaaaaa;
+    --code-font-size: 14px;
+    --code-line-height: 1.4;
+    --scroll-bar-color: #c5c5c5;
+    --scroll-bar-bg-color: #f6f6f6;
+}
+
+pre {
+    color: var(--code-color);
+    font-size: var(--code-font-size);
+    line-height: var(--code-line-height);
+    background-color: var(--code-bg-color);
+}
+
+.code-block {
+    max-height: 100px;
+    overflow: auto;
+    padding: 8px 7px 5px 15px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-corner { background: rgba(0,0,0,0.5); }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scroll-bar-bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-bar-color);
+    border-radius: 20px;
+    border: 3px solid var(--scroll-bar-bg-color);
+}
+
+/* bot */
+.chat-icon{
+    position: fixed;
+    right: 5rem;
+    bottom: 0;
+    font-size: 4rem;
+    z-index: 100;
+}
+.chatbox{
+    position: fixed;
+    bottom: 6rem;
+    right: 5rem;
+    width: 20rem;
+    z-index: 100;
+    background: white;
+    height: 75vh;
+    transition: all 0.4s ease-out;
+}
+.chatbox.active{
+    transform: scaleY(1);
 }
